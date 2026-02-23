@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | VMK Dubai</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Fonts/Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏗️</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .page-header {
+            padding: 8rem 5% 4rem;
+            background-color: var(--color-bg);
+            color: var(--color-text-light);
+        }
+
+        .page-title {
+            font-family: 'CustomHero', var(--font-heading);
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            margin-bottom: 1rem;
+        }
+
+        .page-content {
+            padding: 4rem 5%;
+            background: white;
+            color: var(--color-text-dark);
+            min-height: 60vh;
+        }
+
+        /* Reuse card grid styles but ensure they work without scroll triggers if needed */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="fixed-nav">
+        <div class="logo"><a href="index.html" style="color:inherit; text-decoration:none;">VMK</a></div>
+        <div class="nav-links">
+            <a href="services.html" class="active">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <a href="contact.html" class="btn-pill">Get a Quote</a>
+    </nav>
+
+    <header class="page-header">
+        <h1 class="page-title">Our Services</h1>
+        <p class="hero-subtitle">Comprehensive Solutions for Every Stage</p>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <div class="cards-grid">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-image-wrapper">
+                        <img src="./assets/images/card_planning.webp" alt="Planning" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3>Planning & Approvals</h3>
+                        <p>Seamless processing with Dubai Municipality, DDA, Trakhees, and Nakheel.</p>
+                        <a href="planning.html" class="card-action">
+                            <span>Learn More</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-image-wrapper">
+                        <img src="./assets/images/card_construction.webp" alt="Construction" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3>Construction & Fit-Out</h3>
+                        <p>High-end residential and commercial execution with precision engineering.</p>
+                        <a href="construction.html" class="card-action">
+                            <span>Learn More</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-image-wrapper">
+                        <img src="./assets/images/card_handover.webp" alt="Handover" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3>Turnkey Handover</h3>
+                        <p>From concept to completion. We deliver the keys to your vision.</p>
+                        <a href="handover.html" class="card-action">
+                            <span>Learn More</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <span class="footer-logo">VMK</span>
+                <p>&copy; 2026 VMK Construction. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

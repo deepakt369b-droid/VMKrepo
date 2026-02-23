@@ -1,0 +1,10 @@
+{
+  "permission": {
+    "read": {
+      "C:/Users/SAHARA/Desktop/Scroll-Work/.opencode/get-shit-done/*": "allow"
+    },
+    "external_directory": {
+      "C:/Users/SAHARA/Desktop/Scroll-Work/.opencode/get-shit-done/*": "allow"
+    }
+  }
+}
