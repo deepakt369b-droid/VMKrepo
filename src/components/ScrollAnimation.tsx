@@ -127,6 +127,7 @@ export default function ScrollAnimation() {
                     className="text-sm font-bold tracking-[0.3em] mb-4 text-white uppercase"
                     typingSpeed={30}
                     showCursor={false}
+                    loop={false}
                 />
                 <TextType
                     as="h1"
