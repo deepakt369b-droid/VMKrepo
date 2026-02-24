@@ -11,11 +11,16 @@
 - [ ] **UI-01**: Landing page integrates the existing `video-frames` directory for smooth, scroll-driven 3D animations.
 - [ ] **UI-02**: Design aesthetic aligns with premium Dubai real estate/construction standards (VMK branding).
 - [ ] **UI-03**: Users can navigate seamlessly between Home, About, Services, Planning, Construction, Contact, and Handover pages.
+- [ ] **UI-04**: Global Theme Enforcement: All future pages, components, and icons must strictly follow the dark/amber premium architectural theme.
+- [ ] **UI-05**: Background Audio: Integrated background music player with a discrete mute/unmute toggle button for enhanced user experience.
 
 ### Lead Capture & Engagement
 - [ ] **LEAD-01**: "Get a Quote" call-to-action (CTA) button is prominently accessible on the fixed navigation bar and triggers a lead capture form or email intent.
 - [ ] **LEAD-02**: Floating 3D WhatsApp button is present on all pages, allowing users to instantly start a chat with the business.
 - [ ] **LEAD-03**: Contact page includes a functional form (or mailto link) and clear display of Dubai operational areas and contact info.
+
+### Performance & Optimization
+- [ ] **ARCH-04**: PageSpeed & SEO Enforcement: Continuous optimization for Google PageSpeed Insights (metrics > 90) and maximum SEO scores. Every new feature must be audited for bundle size and render blocking.
 
 ## v2 Requirements (Deferred)
 - Interactive Approval Status Tracker for clients
@@ -38,6 +43,9 @@
 | LEAD-01 | Phase 2 |
 | LEAD-02 | Phase 2 |
 | LEAD-03 | Phase 2 |
+| UI-04 | Phase 3 |
+| UI-05 | Phase 3 |
+| ARCH-04 | Phase 3 |
 
 ---
-*Last updated: 2026-02-23*
+*Last updated: 2026-02-24*
