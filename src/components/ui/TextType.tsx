@@ -51,6 +51,7 @@ const TextType: React.FC<TextTypeProps> = ({
     const [isDeleting, setIsDeleting] = useState(false);
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(!startOnVisible);
+    const [isComplete, setIsComplete] = useState(false);
     const cursorRef = useRef<HTMLSpanElement>(null);
     const containerRef = useRef<HTMLElement>(null);
 
@@ -87,16 +88,21 @@ const TextType: React.FC<TextTypeProps> = ({
 
     useEffect(() => {
         if (showCursor && cursorRef.current) {
-            gsap.set(cursorRef.current, { opacity: 1 });
-            gsap.to(cursorRef.current, {
-                opacity: 0,
-                duration: cursorBlinkDuration,
-                repeat: -1,
-                yoyo: true,
-                ease: 'power2.inOut'
-            });
+            if (isComplete) {
+                gsap.killTweensOf(cursorRef.current);
+                gsap.set(cursorRef.current, { opacity: 0 });
+            } else {
+                gsap.set(cursorRef.current, { opacity: 1 });
+                gsap.to(cursorRef.current, {
+                    opacity: 0,
+                    duration: cursorBlinkDuration,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: 'power2.inOut'
+                });
+            }
         }
-    }, [showCursor, cursorBlinkDuration]);
+    }, [showCursor, cursorBlinkDuration, isComplete]);
 
     useEffect(() => {
         if (!isVisible) return;
@@ -135,7 +141,10 @@ const TextType: React.FC<TextTypeProps> = ({
                         variableSpeed ? getRandomSpeed() : typingSpeed
                     );
                 } else if (textArray.length >= 1) {
-                    if (!loop && currentTextIndex === textArray.length - 1) return;
+                    if (!loop && currentTextIndex === textArray.length - 1) {
+                        setIsComplete(true);
+                        return;
+                    }
                     timeout = setTimeout(() => {
                         setIsDeleting(true);
                     }, pauseDuration);
@@ -169,7 +178,7 @@ const TextType: React.FC<TextTypeProps> = ({
     ]);
 
     const shouldHideCursor =
-        hideCursorWhileTyping && (currentCharIndex < textArray[currentTextIndex].length || isDeleting);
+        isComplete || (hideCursorWhileTyping && (currentCharIndex < textArray[currentTextIndex].length || isDeleting));
 
     return createElement(
         Component,
