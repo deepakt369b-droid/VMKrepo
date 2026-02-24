@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // Register ScrollTrigger. It's safe to do this multiple times.
 gsap.registerPlugin(ScrollTrigger);
 
-const FRAME_COUNT = 159;
+const FRAME_COUNT = 158;
 
 export default function ScrollAnimation() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -34,6 +34,12 @@ export default function ScrollAnimation() {
                     if (i === 0 && canvasRef.current) {
                         renderFrame(img);
                     }
+                    if (loadedCount === FRAME_COUNT + 1) {
+                        setImages(loadedImages);
+                    }
+                };
+                img.onerror = () => {
+                    loadedCount++;
                     if (loadedCount === FRAME_COUNT + 1) {
                         setImages(loadedImages);
                     }
