@@ -26,5 +26,18 @@
 ## Out of Scope
 - Backend database management for leads (Initial v1 will rely on direct WhatsApp/Email routing to minimize complexity and focus strictly on organic SEO and frontend presence).
 
+## Traceability
+| Requirement | Phase |
+|-------------|-------|
+| ARCH-01 | Phase 1 |
+| ARCH-02 | Phase 1 |
+| ARCH-03 | Phase 1 |
+| UI-01 | Phase 1 |
+| UI-02 | Phase 1 |
+| UI-03 | Phase 2 |
+| LEAD-01 | Phase 2 |
+| LEAD-02 | Phase 2 |
+| LEAD-03 | Phase 2 |
+
 ---
 *Last updated: 2026-02-23*

@@ -1,0 +1,20 @@
+{
+  "commit_docs": true,
+  "brave_search": false,
+  "phase_found": true,
+  "phase_dir": null,
+  "phase_number": "1",
+  "phase_name": "Groundwork & Architecture",
+  "phase_slug": "groundwork-architecture",
+  "padded_phase": "01",
+  "has_research": false,
+  "has_context": false,
+  "has_plans": false,
+  "has_verification": false,
+  "plan_count": 0,
+  "roadmap_exists": true,
+  "planning_exists": true,
+  "state_path": ".planning/STATE.md",
+  "roadmap_path": ".planning/ROADMAP.md",
+  "requirements_path": ".planning/REQUIREMENTS.md"
+}
