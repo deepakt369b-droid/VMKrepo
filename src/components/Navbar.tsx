@@ -1,13 +1,24 @@
 "use client";
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useUI } from '@/contexts/UIContext';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Volume2, VolumeX } from 'lucide-react';
 
 export default function Navbar() {
-    const { openQuoteModal } = useUI();
+    const { openQuoteModal, isAudioPlaying, toggleAudio } = useUI();
     const [isOpen, setIsOpen] = React.useState(false);
+    const audioRef = useRef<HTMLAudioElement>(null);
+
+    useEffect(() => {
+        if (audioRef.current) {
+            if (isAudioPlaying) {
+                audioRef.current.play().catch(e => console.error("Audio playback failed:", e));
+            } else {
+                audioRef.current.pause();
+            }
+        }
+    }, [isAudioPlaying]);
 
     const navLinks = [
         { name: 'Home', href: '/' },
@@ -25,7 +36,21 @@ export default function Navbar() {
                 <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <span className="self-center text-2xl font-bold whitespace-nowrap text-amber-500">VMK</span>
                 </Link>
-                <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <div className="flex items-center md:order-2 space-x-3 md:space-x-4 rtl:space-x-reverse">
+                    <audio
+                        ref={audioRef}
+                        loop
+                        src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=ambient-piano-ampamp-strings-10711.mp3"
+                        preload="none"
+                    />
+                    <button
+                        type="button"
+                        onClick={toggleAudio}
+                        className="text-neutral-400 hover:text-amber-500 p-2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500/50"
+                        aria-label={isAudioPlaying ? "Mute music" : "Play music"}
+                    >
+                        {isAudioPlaying ? <Volume2 className="w-5 h-5" /> : <VolumeX className="w-5 h-5" />}
+                    </button>
                     <button
                         type="button"
                         onClick={openQuoteModal}

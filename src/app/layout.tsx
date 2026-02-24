@@ -15,6 +15,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "VMK Construction - Building Approvals & Contracting in Dubai",
   description: "Comprehensive construction and authority approval services in Dubai focusing on quality, speed, and premium real estate development.",
+  keywords: "Dubai Construction, Authority Approvals, DM Approval, DCD Approval, Fit-out Dubai, Contracting Company UAE",
+  openGraph: {
+    title: "VMK Construction | Premium Dubai Contractors",
+    description: "Expert building approvals and high-end contracting in Dubai.",
+    type: "website",
+    locale: "en_AE",
+  }
 };
 
 import { UIProvider } from "@/contexts/UIContext";
@@ -30,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
       >
         <UIProvider>
           <Navbar />

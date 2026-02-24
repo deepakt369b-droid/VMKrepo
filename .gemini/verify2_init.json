@@ -1,0 +1,10 @@
+{
+  "planner_model": "inherit",
+  "checker_model": "sonnet",
+  "commit_docs": true,
+  "phase_found": true,
+  "phase_dir": ".planning\\phases\\02-features-cta",
+  "phase_number": "02",
+  "phase_name": "features-cta",
+  "has_verification": false
+}
