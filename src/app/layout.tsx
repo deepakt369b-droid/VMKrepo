@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   description: "Comprehensive construction and authority approval services in Dubai focusing on quality, speed, and premium real estate development.",
 };
 
+import { UIProvider } from "@/contexts/UIContext";
+import Navbar from "@/components/Navbar";
+import QuoteModal from "@/components/QuoteModal";
+import WhatsAppButton from "@/components/WhatsAppButton";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,7 +32,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <UIProvider>
+          <Navbar />
+          {children}
+          <QuoteModal />
+          <WhatsAppButton />
+        </UIProvider>
       </body>
     </html>
   );

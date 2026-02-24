@@ -1,0 +1,10 @@
+{
+  "planner_model": "inherit",
+  "checker_model": "sonnet",
+  "commit_docs": true,
+  "phase_found": true,
+  "phase_dir": ".planning\\phases\\01-groundwork-architecture",
+  "phase_number": "01",
+  "phase_name": "groundwork-architecture",
+  "has_verification": false
+}
