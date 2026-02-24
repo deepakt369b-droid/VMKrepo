@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import TextType from "./ui/TextType";
 
 // Register ScrollTrigger. It's safe to do this multiple times.
 gsap.registerPlugin(ScrollTrigger);
@@ -120,13 +121,34 @@ export default function ScrollAnimation() {
             />
             {/* Absolute overlay content would go here */}
             <div className="absolute inset-0 flex flex-col justify-center items-center text-white z-10 pointer-events-none p-4 text-center mt-20">
-                <p className="text-sm font-bold tracking-[0.3em] mb-4 text-white uppercase">Operating Across All Dubai Authorities</p>
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-widest mb-4 text-white uppercase font-sans">
-                    Building Dubai&apos;s Future
-                </h1>
-                <p className="text-3xl md:text-5xl italic text-amber-500 font-serif lowercase" style={{ textTransform: 'capitalize' }}>
-                    Construction & Authority Approvals
-                </p>
+                <TextType
+                    as="p"
+                    text="Operating Across All Dubai Authorities"
+                    className="text-sm font-bold tracking-[0.3em] mb-4 text-white uppercase"
+                    typingSpeed={30}
+                    showCursor={false}
+                />
+                <TextType
+                    as="h1"
+                    text="Building Dubai's Future"
+                    className="text-5xl md:text-7xl lg:text-8xl font-black tracking-widest mb-4 text-white uppercase font-sans"
+                    typingSpeed={60}
+                    initialDelay={1200}
+                    showCursor={true}
+                    cursorBlinkDuration={0.8}
+                    loop={false}
+                    hideCursorWhileTyping={true}
+                />
+                <TextType
+                    as="p"
+                    text="Construction & Authority Approvals"
+                    className="text-3xl md:text-5xl italic text-amber-500 font-serif lowercase"
+                    style={{ textTransform: 'capitalize' }}
+                    typingSpeed={40}
+                    initialDelay={2800}
+                    showCursor={false}
+                    loop={false}
+                />
 
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
                     <span className="text-xs uppercase tracking-[0.3em] text-white/70 mb-2">Scroll</span>
