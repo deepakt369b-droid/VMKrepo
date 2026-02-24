@@ -176,6 +176,7 @@ const TextType: React.FC<TextTypeProps> = ({
         {
             ref: containerRef,
             className: `text-type ${className}`,
+            suppressHydrationWarning: true,
             ...props
         },
         <span className="text-type__content" style={{ color: getCurrentTextColor() || 'inherit' }}>

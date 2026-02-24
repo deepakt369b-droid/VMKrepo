@@ -31,7 +31,7 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className="fixed w-full z-50 top-0 start-0 border-b border-white/10 bg-transparent backdrop-blur-sm transition-all duration-300">
+        <nav className="fixed w-full z-50 top-0 start-0 border-b border-white/10 bg-transparent backdrop-blur-sm transition-all duration-300" suppressHydrationWarning>
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <span className="self-center text-3xl font-black whitespace-nowrap text-white uppercase font-sans">VMK</span>

@@ -38,6 +38,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${montserrat.variable} ${playfair.variable} font-sans antialiased bg-primary text-white`}
+        suppressHydrationWarning
       >
         <UIProvider>
           <Navbar />
