@@ -23,10 +23,15 @@ export default function Navbar() {
     const navLinks = [
         { name: 'Home', href: '/' },
         { name: 'About', href: '/about' },
-        { name: 'Services', href: '/services' },
-        { name: 'Planning', href: '/planning' },
-        { name: 'Construction', href: '/construction' },
-        { name: 'Handover', href: '/handover' },
+        {
+            name: 'Services',
+            href: '/services',
+            dropdown: [
+                { name: 'Planning', href: '/planning' },
+                { name: 'Construction', href: '/construction' },
+                { name: 'Handover', href: '/handover' },
+            ]
+        },
         { name: 'Contact', href: '/contact' },
     ];
 
@@ -73,14 +78,44 @@ export default function Navbar() {
                 <div className={`items-center justify-between ${isOpen ? 'flex' : 'hidden'} w-full md:flex md:w-auto md:order-1`} id="navbar-sticky">
                     <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-neutral-800 rounded-lg bg-black/80 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent w-full">
                         {navLinks.map((link) => (
-                            <li key={link.name}>
-                                <Link
-                                    href={link.href}
-                                    className="block py-2 px-3 text-gray-300 rounded hover:bg-neutral-800 md:hover:bg-transparent md:hover:text-amber-500 md:p-0 transition-colors"
-                                    onClick={() => setIsOpen(false)}
-                                >
-                                    {link.name}
-                                </Link>
+                            <li key={link.name} className={link.dropdown ? "relative group" : ""}>
+                                {link.dropdown ? (
+                                    <>
+                                        <Link
+                                            href={link.href}
+                                            className="flex items-center justify-between py-2 px-3 text-gray-300 rounded hover:bg-neutral-800 md:hover:bg-transparent md:hover:text-amber-500 md:p-0 transition-colors"
+                                            onClick={() => setIsOpen(false)}
+                                        >
+                                            {link.name}
+                                            <svg className="w-2.5 h-2.5 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
+                                            </svg>
+                                        </Link>
+                                        <div className="hidden group-hover:block md:absolute left-0 mt-2 font-normal bg-black/95 divide-y divide-gray-100 rounded-lg shadow min-w-[200px] border border-white/10 md:opacity-0 md:-translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-200">
+                                            <ul className="py-2 text-sm text-gray-300">
+                                                {link.dropdown.map((sublink) => (
+                                                    <li key={sublink.name}>
+                                                        <Link
+                                                            href={sublink.href}
+                                                            className="block px-4 py-2 hover:bg-neutral-800 hover:text-amber-500 transition-colors"
+                                                            onClick={() => setIsOpen(false)}
+                                                        >
+                                                            {sublink.name}
+                                                        </Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </>
+                                ) : (
+                                    <Link
+                                        href={link.href}
+                                        className="block py-2 px-3 text-gray-300 rounded hover:bg-neutral-800 md:hover:bg-transparent md:hover:text-amber-500 md:p-0 transition-colors"
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                )}
                             </li>
                         ))}
                     </ul>
