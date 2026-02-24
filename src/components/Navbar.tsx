@@ -31,10 +31,10 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className="fixed w-full z-50 top-0 start-0 border-b border-neutral-800 bg-black/60 backdrop-blur-md">
+        <nav className="fixed w-full z-50 top-0 start-0 border-b border-white/10 bg-transparent backdrop-blur-sm transition-all duration-300">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <span className="self-center text-2xl font-bold whitespace-nowrap text-amber-500">VMK</span>
+                    <span className="self-center text-3xl font-black whitespace-nowrap text-white uppercase font-sans">VMK</span>
                 </Link>
                 <div className="flex items-center md:order-2 space-x-3 md:space-x-4 rtl:space-x-reverse">
                     <audio
@@ -54,7 +54,7 @@ export default function Navbar() {
                     <button
                         type="button"
                         onClick={openQuoteModal}
-                        className="text-black bg-amber-500 hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors"
+                        className="text-white bg-transparent border border-white hover:bg-white hover:text-black font-medium rounded-full text-sm px-6 py-2 text-center transition-colors"
                     >
                         Get a Quote
                     </button>

@@ -5,9 +5,12 @@
   --color-neutral-950: #213448;
   --color-neutral-900: #485460;
   --color-neutral-800: #779294;
-  --color-amber-500: #eae0cf;
+  --color-amber-500: #D4AF37;
   --color-amber-400: #b4c1ea;
   --color-amber-300: #ffffff;
+  --color-primary: #eae0cf;
+  --font-sans: var(--font-montserrat);
+  --font-serif: var(--font-playfair);
 }
 
 :root {

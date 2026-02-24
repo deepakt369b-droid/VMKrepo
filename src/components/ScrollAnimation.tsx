@@ -119,9 +119,21 @@ export default function ScrollAnimation() {
                 className="absolute top-0 left-0 w-full h-full object-cover"
             />
             {/* Absolute overlay content would go here */}
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-white z-10 pointer-events-none p-4 text-center">
-                <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">VMK Construction</h1>
-                <p className="text-xl md:text-2xl font-light text-gray-200 max-w-2xl bg-black bg-opacity-40 p-4 rounded-xl backdrop-blur-sm">Premium Building Approvals & Contracting in Dubai</p>
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-white z-10 pointer-events-none p-4 text-center mt-20">
+                <p className="text-sm font-bold tracking-[0.3em] mb-4 text-white uppercase">Operating Across All Dubai Authorities</p>
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-widest mb-4 text-white uppercase font-sans">
+                    Building Dubai&apos;s Future
+                </h1>
+                <p className="text-3xl md:text-5xl italic text-amber-500 font-serif lowercase" style={{ textTransform: 'capitalize' }}>
+                    Construction & Authority Approvals
+                </p>
+
+                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
+                    <span className="text-xs uppercase tracking-[0.3em] text-white/70 mb-2">Scroll</span>
+                    <div className="w-[1px] h-16 bg-white/30 relative overflow-hidden">
+                        <div className="absolute top-0 left-0 w-full h-full bg-white animate-pulse"></div>
+                    </div>
+                </div>
             </div>
         </div>
     );
