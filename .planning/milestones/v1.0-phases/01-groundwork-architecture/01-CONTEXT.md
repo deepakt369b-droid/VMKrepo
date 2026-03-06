@@ -29,16 +29,4 @@ Setting up the initial React SEO skeleton using Next.js, integrating the VMK Bra
 <specifics>
 ## Specific Ideas
 
-The existing `video-frames` directory and the `index.html` structure (which currently relies on `<canvas id="hero-canvas">`) format the basis for the animation. We must port this carefully into a React Context/Component using Next.js and GSAP without losing the smooth scrolling effect, while optimizing the payload.
-</specifics>
-
-<deferred>
-## Deferred Ideas
-
-None — discussion stayed within phase scope.
-</deferred>
-
----
-
-*Phase: 01-groundwork-architecture*
-*Context gathered: 2026-02-24*
+The existing `video-frames` directory and the `index.html` structure (which currently relies on `<canvas id="hero-canvas">`) format the basnpx skills add ihlamury/design-skills
