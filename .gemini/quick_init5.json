@@ -1,0 +1,16 @@
+{
+  "planner_model": "inherit",
+  "executor_model": "sonnet",
+  "checker_model": "sonnet",
+  "verifier_model": "sonnet",
+  "commit_docs": true,
+  "next_num": 5,
+  "slug": "fix-deep-browser-extension-hydration-mis",
+  "description": "Fix deep browser extension hydration mismatches",
+  "date": "2026-02-24",
+  "timestamp": "2026-02-24T08:04:24.006Z",
+  "quick_dir": ".planning/quick",
+  "task_dir": ".planning/quick/5-fix-deep-browser-extension-hydration-mis",
+  "roadmap_exists": true,
+  "planning_exists": true
+}

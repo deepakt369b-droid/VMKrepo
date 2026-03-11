@@ -2,11 +2,13 @@
 
 import React, { useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useUI } from '@/contexts/UIContext';
 import { Menu, X, Volume2, VolumeX } from 'lucide-react';
 
 export default function Navbar() {
     const { openQuoteModal, isAudioPlaying, toggleAudio } = useUI();
+    const pathname = usePathname();
     const [isOpen, setIsOpen] = React.useState(false);
     const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -33,19 +35,31 @@ export default function Navbar() {
             ]
         },
         { name: 'Contact', href: '/contact' },
+        { name: 'Blog', href: '/blog' },
     ];
+
+    const handleLogoClick = (e: React.MouseEvent) => {
+        if (typeof window !== 'undefined' && pathname === '/') {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    };
 
     return (
         <nav className="fixed w-full z-50 top-0 start-0 border-b border-white/10 bg-transparent backdrop-blur-sm transition-all duration-300" suppressHydrationWarning>
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <span className="self-center text-3xl font-black whitespace-nowrap text-white uppercase font-sans">VMK</span>
+            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4" suppressHydrationWarning>
+                <Link 
+                    href="/" 
+                    onClick={handleLogoClick}
+                    className="flex items-center space-x-3 rtl:space-x-reverse"
+                >
+                    <img src="/vmk-logo-new.png" alt="VMK Construction" className="h-16 w-auto object-contain drop-shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-transform hover:scale-105" />
                 </Link>
-                <div className="flex items-center md:order-2 space-x-3 md:space-x-4 rtl:space-x-reverse">
+                <div className="flex items-center md:order-2 space-x-3 md:space-x-4 rtl:space-x-reverse" suppressHydrationWarning>
                     <audio
                         ref={audioRef}
                         loop
-                        src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=ambient-piano-ampamp-strings-10711.mp3"
+                        src="/audio/ambient.mp3"
                         preload="none"
                     />
                     <button
@@ -59,7 +73,7 @@ export default function Navbar() {
                     <button
                         type="button"
                         onClick={openQuoteModal}
-                        className="text-white bg-transparent border border-white hover:bg-white hover:text-black font-medium rounded-full text-sm px-6 py-2 text-center transition-colors"
+                        className="text-black bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 hover:from-amber-400 hover:via-amber-300 hover:to-amber-500 font-bold rounded-full text-sm px-6 py-2 text-center transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:shadow-[0_0_20px_rgba(212,175,55,0.5)] transform hover:-translate-y-0.5"
                     >
                         Get a Quote
                     </button>
@@ -75,7 +89,7 @@ export default function Navbar() {
                         {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                     </button>
                 </div>
-                <div className={`items-center justify-between ${isOpen ? 'flex' : 'hidden'} w-full md:flex md:w-auto md:order-1`} id="navbar-sticky">
+                <div className={`items-center justify-between ${isOpen ? 'flex' : 'hidden'} w-full md:flex md:w-auto md:order-1`} id="navbar-sticky" suppressHydrationWarning>
                     <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-neutral-800 rounded-lg bg-black/80 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent w-full">
                         {navLinks.map((link) => (
                             <li key={link.name} className={link.dropdown ? "relative group" : ""}>
@@ -91,20 +105,22 @@ export default function Navbar() {
                                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
                                             </svg>
                                         </Link>
-                                        <div className="hidden group-hover:block md:absolute left-0 mt-2 font-normal bg-black/95 divide-y divide-gray-100 rounded-lg shadow min-w-[200px] border border-white/10 md:opacity-0 md:-translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-200">
-                                            <ul className="py-2 text-sm text-gray-300">
-                                                {link.dropdown.map((sublink) => (
-                                                    <li key={sublink.name}>
-                                                        <Link
-                                                            href={sublink.href}
-                                                            className="block px-4 py-2 hover:bg-neutral-800 hover:text-amber-500 transition-colors"
-                                                            onClick={() => setIsOpen(false)}
-                                                        >
-                                                            {sublink.name}
-                                                        </Link>
-                                                    </li>
-                                                ))}
-                                            </ul>
+                                        <div className="hidden group-hover:block md:absolute left-0 top-full pt-4 min-w-[200px] z-50">
+                                            <div className="font-normal bg-neutral-950/90 backdrop-blur-md divide-y divide-white/5 rounded-xl shadow-2xl border border-white/10 md:opacity-0 md:-translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-300 overflow-hidden">
+                                                <ul className="py-2 text-sm text-gray-300">
+                                                    {link.dropdown.map((sublink) => (
+                                                        <li key={sublink.name}>
+                                                            <Link
+                                                                href={sublink.href}
+                                                                className="block px-4 py-3 hover:bg-white/5 hover:text-amber-500 transition-colors"
+                                                                onClick={() => setIsOpen(false)}
+                                                            >
+                                                                {sublink.name}
+                                                            </Link>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
                                         </div>
                                     </>
                                 ) : (

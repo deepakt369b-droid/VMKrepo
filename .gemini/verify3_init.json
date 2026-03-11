@@ -1,0 +1,10 @@
+{
+  "planner_model": "inherit",
+  "checker_model": "sonnet",
+  "commit_docs": true,
+  "phase_found": true,
+  "phase_dir": ".planning\\phases\\03-experience-optimization",
+  "phase_number": "03",
+  "phase_name": "experience-optimization",
+  "has_verification": false
+}

@@ -1,0 +1,16 @@
+{
+  "planner_model": "inherit",
+  "executor_model": "sonnet",
+  "checker_model": "sonnet",
+  "verifier_model": "sonnet",
+  "commit_docs": true,
+  "next_num": 8,
+  "slug": "add-services-dropdown-to-navbar-for-plan",
+  "description": "Add Services dropdown to Navbar for Planning, Construction, Handover",
+  "date": "2026-02-24",
+  "timestamp": "2026-02-24T09:28:46.546Z",
+  "quick_dir": ".planning/quick",
+  "task_dir": ".planning/quick/8-add-services-dropdown-to-navbar-for-plan",
+  "roadmap_exists": true,
+  "planning_exists": true
+}

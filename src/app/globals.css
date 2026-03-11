@@ -1,27 +1,45 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-black: #213448;
-  --color-neutral-950: #213448;
-  --color-neutral-900: #485460;
-  --color-neutral-800: #779294;
-  --color-amber-500: #D4AF37;
-  --color-amber-400: #b4c1ea;
-  --color-amber-300: #ffffff;
-  --color-primary: #eae0cf;
+  --color-black: #050505;
+  --color-neutral-950: #0a0a0a;
+  --color-neutral-900: #171717;
+  --color-neutral-800: #262626;
+  --color-amber-600: #b8860b;
+  --color-amber-500: #d4af37;
+  --color-amber-400: #f3e5ab;
+  --color-amber-300: #f9f6e6;
+  --color-primary: #d4af37;
   --font-sans: var(--font-montserrat);
   --font-serif: var(--font-playfair);
+
+  /* Marquee Animation Support */
+  --animate-marquee: marquee 30s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-33.333333%);
+    }
+  }
+}
+
+@utility pause {
+  animation-play-state: paused;
 }
 
 :root {
-  --background: #213448;
-  --foreground: #eae0cf;
+  --background: #050505;
+  --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #213448;
-    --foreground: #eae0cf;
+    --background: #050505;
+    --foreground: #ffffff;
   }
 }
 
@@ -29,4 +47,81 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gold-gradient {
+  background: linear-gradient(135deg, #f9f6e6, #d4af37, #b8860b, #f3e5ab, #d4af37);
+  background-size: 300% 300%;
+  animation: gradient-shift 5s ease infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* React Quill Dark Mode Overrides */
+.quill-dark-theme .ql-toolbar {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.quill-dark-theme .ql-container {
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+  font-family: inherit;
+  font-size: 0.875rem;
+}
+
+.quill-dark-theme .ql-editor {
+  min-height: 250px;
+}
+
+.quill-dark-theme .ql-stroke {
+  stroke: #a3a3a3 !important;
+}
+
+.quill-dark-theme .ql-fill {
+  fill: #a3a3a3 !important;
+}
+
+.quill-dark-theme .ql-picker {
+  color: #a3a3a3 !important;
+}
+
+.quill-dark-theme .ql-picker-options {
+  background-color: #171717 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.quill-dark-theme .ql-active .ql-stroke,
+.quill-dark-theme .ql-picker-item:hover .ql-stroke {
+  stroke: #d4af37 !important;
+}
+
+.quill-dark-theme .ql-active .ql-fill,
+.quill-dark-theme .ql-picker-item:hover .ql-fill {
+  fill: #d4af37 !important;
+}
+
+.quill-dark-theme .ql-active,
+.quill-dark-theme .ql-picker-label:hover,
+.quill-dark-theme .ql-picker-item:hover {
+  color: #d4af37 !important;
 }

@@ -1,0 +1,16 @@
+{
+  "planner_model": "inherit",
+  "executor_model": "sonnet",
+  "checker_model": "sonnet",
+  "verifier_model": "sonnet",
+  "commit_docs": true,
+  "next_num": 7,
+  "slug": "disable-loop-on-operating-dubia-text-typ",
+  "description": "Disable loop on operating dubia text typing animation",
+  "date": "2026-02-24",
+  "timestamp": "2026-02-24T09:19:15.595Z",
+  "quick_dir": ".planning/quick",
+  "task_dir": ".planning/quick/7-disable-loop-on-operating-dubia-text-typ",
+  "roadmap_exists": true,
+  "planning_exists": true
+}

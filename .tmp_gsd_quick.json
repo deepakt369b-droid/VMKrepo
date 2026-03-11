@@ -1,0 +1,16 @@
+{
+  "planner_model": "inherit",
+  "executor_model": "sonnet",
+  "checker_model": "sonnet",
+  "verifier_model": "sonnet",
+  "commit_docs": true,
+  "next_num": 2,
+  "slug": null,
+  "description": null,
+  "date": "2026-02-24",
+  "timestamp": "2026-02-24T06:45:05.267Z",
+  "quick_dir": ".planning/quick",
+  "task_dir": null,
+  "roadmap_exists": true,
+  "planning_exists": true
+}

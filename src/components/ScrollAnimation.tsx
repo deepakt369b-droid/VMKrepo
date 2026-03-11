@@ -132,7 +132,7 @@ export default function ScrollAnimation() {
                 <TextType
                     as="h1"
                     text="Building Dubai's Future"
-                    className="text-5xl md:text-7xl lg:text-8xl font-black tracking-widest mb-4 text-white uppercase font-sans"
+                    className="text-5xl md:text-7xl lg:text-8xl font-black tracking-widest mb-4 text-white uppercase font-sans [text-shadow:0_1px_0_rgb(204,204,204),0_2px_0_rgb(201,201,201),0_3px_0_rgb(187,187,187),0_4px_0_rgb(185,185,185),0_5px_0_rgb(170,170,170),0_6px_1px_rgba(0,0,0,0.1),0_0_5px_rgba(0,0,0,0.1),0_1px_3px_rgba(0,0,0,0.3),0_3px_5px_rgba(0,0,0,0.2),0_5px_10px_rgba(0,0,0,0.25),0_10px_10px_rgba(0,0,0,0.2),0_20px_20px_rgba(0,0,0,0.15)]"
                     typingSpeed={60}
                     initialDelay={1200}
                     showCursor={true}
@@ -143,7 +143,7 @@ export default function ScrollAnimation() {
                 <TextType
                     as="p"
                     text="Construction & Authority Approvals"
-                    className="text-3xl md:text-5xl italic text-amber-500 font-serif lowercase"
+                    className="text-3xl md:text-5xl italic text-amber-500 font-serif lowercase [text-shadow:0_1px_0_rgb(180,110,0),0_2px_0_rgb(160,95,0),0_3px_0_rgb(140,80,0),0_4px_0_rgb(120,65,0),0_5px_0_rgb(100,50,0),0_6px_1px_rgba(0,0,0,0.1),0_0_5px_rgba(0,0,0,0.1),0_1px_3px_rgba(0,0,0,0.3),0_3px_5px_rgba(0,0,0,0.2),0_5px_10px_rgba(0,0,0,0.25),0_10px_10px_rgba(0,0,0,0.2),0_20px_20px_rgba(0,0,0,0.15)]"
                     style={{ textTransform: 'capitalize' }}
                     typingSpeed={40}
                     initialDelay={2800}
@@ -151,10 +151,10 @@ export default function ScrollAnimation() {
                     loop={false}
                 />
 
-                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
-                    <span className="text-xs uppercase tracking-[0.3em] text-white/70 mb-2">Scroll</span>
-                    <div className="w-[1px] h-16 bg-white/30 relative overflow-hidden">
-                        <div className="absolute top-0 left-0 w-full h-full bg-white animate-pulse"></div>
+                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center" suppressHydrationWarning>
+                    <span className="text-xs uppercase tracking-[0.3em] text-white/70 mb-2" suppressHydrationWarning>Scroll</span>
+                    <div className="w-[1px] h-16 bg-white/30 relative overflow-hidden" suppressHydrationWarning>
+                        <div className="absolute top-0 left-0 w-full h-full bg-white animate-pulse" suppressHydrationWarning></div>
                     </div>
                 </div>
             </div>

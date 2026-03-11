@@ -1,0 +1,16 @@
+{
+  "planner_model": "inherit",
+  "executor_model": "sonnet",
+  "checker_model": "sonnet",
+  "verifier_model": "sonnet",
+  "commit_docs": true,
+  "next_num": 6,
+  "slug": "fix-texttype-cursor-blinking-after-anima",
+  "description": "Fix TextType cursor blinking after animation completion",
+  "date": "2026-02-24",
+  "timestamp": "2026-02-24T09:13:22.227Z",
+  "quick_dir": ".planning/quick",
+  "task_dir": ".planning/quick/6-fix-texttype-cursor-blinking-after-anima",
+  "roadmap_exists": true,
+  "planning_exists": true
+}

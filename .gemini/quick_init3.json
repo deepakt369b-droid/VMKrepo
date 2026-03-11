@@ -1,0 +1,16 @@
+{
+  "planner_model": "inherit",
+  "executor_model": "sonnet",
+  "checker_model": "sonnet",
+  "verifier_model": "sonnet",
+  "commit_docs": true,
+  "next_num": 3,
+  "slug": "fix-hydration-mismatch-error-caused-by-b",
+  "description": "Fix hydration mismatch error caused by browser extension attributes",
+  "date": "2026-02-24",
+  "timestamp": "2026-02-24T07:42:48.681Z",
+  "quick_dir": ".planning/quick",
+  "task_dir": ".planning/quick/3-fix-hydration-mismatch-error-caused-by-b",
+  "roadmap_exists": true,
+  "planning_exists": true
+}

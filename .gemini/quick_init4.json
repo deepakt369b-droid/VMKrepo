@@ -1,0 +1,16 @@
+{
+  "planner_model": "inherit",
+  "executor_model": "sonnet",
+  "checker_model": "sonnet",
+  "verifier_model": "sonnet",
+  "commit_docs": true,
+  "next_num": 4,
+  "slug": "add-text-typing-animation-to-landing-pag",
+  "description": "Add text typing animation to landing page headers",
+  "date": "2026-02-24",
+  "timestamp": "2026-02-24T07:59:15.067Z",
+  "quick_dir": ".planning/quick",
+  "task_dir": ".planning/quick/4-add-text-typing-animation-to-landing-pag",
+  "roadmap_exists": true,
+  "planning_exists": true
+}

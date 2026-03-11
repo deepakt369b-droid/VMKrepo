@@ -25,9 +25,7 @@ export const metadata: Metadata = {
 };
 
 import { UIProvider } from "@/contexts/UIContext";
-import Navbar from "@/components/Navbar";
-import QuoteModal from "@/components/QuoteModal";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import LayoutWrapper from "@/components/LayoutWrapper";
 
 export default function RootLayout({
   children,
@@ -37,14 +35,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${montserrat.variable} ${playfair.variable} font-sans antialiased bg-primary text-white`}
+        className={`${montserrat.variable} ${playfair.variable} font-sans antialiased bg-black text-white`}
         suppressHydrationWarning
       >
         <UIProvider>
-          <Navbar />
-          {children}
-          <QuoteModal />
-          <WhatsAppButton />
+          <LayoutWrapper>
+            {children}
+          </LayoutWrapper>
         </UIProvider>
       </body>
     </html>

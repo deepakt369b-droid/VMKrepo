@@ -1,0 +1,445 @@
+{
+  "version": 1,
+  "skills": {
+    "airbnb-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "e00b5d267633ef94ea2210c2f32a96267d5500b80949b2cc64eafb5a4583574d"
+    },
+    "airtable-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "ad07b2a5cb7c95ad9df36afeb8f11575ea11190c66b0473eb1ac7d0294e3cf80"
+    },
+    "amplitude-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "84f47b6b856fcac77bd996d1cd2382ecc2eb02cd1bbadf14046fac04727b3eb6"
+    },
+    "anthropic-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "1d4ea39a22a17831eb5cdf3e8a4f608736e6c87b01f3d5df22e3f033cf2a5be3"
+    },
+    "apple-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "828dd7e43a8492df7f2a101e0e5284e00398dc080de3ac8a9c7e4e193949040b"
+    },
+    "arc-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "e88ace2d9a597e85976d8760e07e85ac6a808be257e651c4e1fe514fd2845fa2"
+    },
+    "ashby-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "fb724f9fd4c5c3d324a910dab4b840875a5a2009876e55befcec0867470e4bd2"
+    },
+    "awwwards-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "10e497f6aa44ed7907ab69acfcd03ba386bf147d07f9982616282d67a0bd4c7c"
+    },
+    "bear-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "69fb215ecdcdf60b0bbb2171272a2e70f999e8c7ee27702a959556e2125dcdea"
+    },
+    "beehiiv-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "990107c8eec081029b40ebfcfb4e286d059bc69bb702ea81a2626f74f981a6e2"
+    },
+    "brex-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "6dc32e2d067938c6af6dcf08e4dc20ed273bbfb9dfc3299827b6e2cdccdd9dfc"
+    },
+    "cal-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "ac36414a7cbfd6c6eb43d3bcc744fc7ddf39a65948267e6c1dd2f90292cd3b06"
+    },
+    "clerk-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "a412bd9a316c096beca1b36b388b922c6e4e895ce4b5066126cb621aab4ae997"
+    },
+    "coda-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "f799cf815cda50083c7cf7d2c1a67e1089997bcd3ac47412524abb194f31ad54"
+    },
+    "codeium-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "23e52e7ba46c967c66c7e423795ea776a730e14f673fa23e540a517c00698305"
+    },
+    "convertkit-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "f30cf093c359553e1696aa8f83a3408f75af5a595a8cfd484a6b7422ba339644"
+    },
+    "convex-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "a9ba6fdae2aa612a5b0a41d5e008e58b7b3f757e87a9c4336a7f6c31ee2af742"
+    },
+    "copy-ai-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "d786c1dfc76ec73648fb10d5eb71439c2bf43aa92ec6e8b262a3719730b09f96"
+    },
+    "craft-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "c844f031eca637f06f918e88e677426eee043c154862179efc2fd6b68ec1cc1f"
+    },
+    "deel-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "8a793f882afe7a2b2b1a7098d9e1b6a83879cadffa48065c7e5a05ce8b6a89a2"
+    },
+    "descript-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "8743fee9b06d25ef41b2685734818e06a55494354b342db298fb18d308f56f51"
+    },
+    "discord-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "e295fbba17d738ecd7b5c54ef714d64eb2ffdd60613826425d2f29ee3df2fa99"
+    },
+    "dribbble-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "c68bc0d2e6dd84a3ae4748710552a1f2067bf560f22d24f32e2ab050689a917c"
+    },
+    "figma-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "86d0e4303e37da0aac5bf57abc74f7f65de720744a27ec6d0d4fbccb1f5f7085"
+    },
+    "framer-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "211915eec0dba3034f7b14ccf6d644f829cd3ab12df61609e8e206fb1cd4b872"
+    },
+    "front-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "e808b53462e393480740cfe77879bb144a3defc33aeb9d3b278becb074cf85ba"
+    },
+    "ghost-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "8b029b271f49e4423f2d49288cbef9fe90d1a39d565396608f2cf3d0ce4db286"
+    },
+    "github-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "525a8ff1c360356776964704bc2fa58fdb511940d0dc81aa18bc18624b9d7a40"
+    },
+    "gumroad-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "9021445beaeffa84ecd350838945658daff1114cb880a36fd53c192c0ebf9db1"
+    },
+    "gusto-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "82d269745cd1cda126d6097cca977c2dd8d67990434d2ddf056cf93e766aaddb"
+    },
+    "hugging-face-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "631a87146738aa0190e9aeb2a17f370848b733c6e0a99f56fee7e007d6e33c6d"
+    },
+    "intercom-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "6c8c29ec4a76f05ab92617f56b9af76e08e1fba4f848ac52c5e4c77fb003f7fa"
+    },
+    "jasper-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "3a2dcbcc5524e4b22ebb1afbb487aff5c10378cb51b3a30f1830edf14aea5083"
+    },
+    "lattice-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "d12b4ac20008378a90d79b897d8b7d0fefbf7ec068398ddad40dbd2b017515d4"
+    },
+    "launchdarkly-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "45c155ac305f37096dbc3b3017fb40e05f89033e11c6a727942b9a15203888f3"
+    },
+    "lemonsqueezy-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "fec10108a56b5e4a5a998d99e453e0142c92d58f73955b566c2cf7bf8da1fcdc"
+    },
+    "linear-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "1973e2441322916651bd355d2c5096a67d0cde07d9763fd68b52f0beb6ea0e89"
+    },
+    "liveblocks-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "8becae691f6f0c7efb8244c905f7c70e709c15f67c95ed9e4c6e36fa08ac7398"
+    },
+    "loom-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "9f4dd05f6c2c310b4b06f47dc6434ebd899f626df3cc94c274594e2a337d2af3"
+    },
+    "loops-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "fd946df225e44f845c4d832b4d33aef4986ca8de30a207592ba4224c5ce344a3"
+    },
+    "mailchimp-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "01806e67e605dd0792bf9b8d550a27bce3d7e367e7c51617f9e62d53cde96272"
+    },
+    "matter-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "bdb6ebd5652345cc37e30212cc8af42f97d873aa18de2e5c0da985108ca10b9c"
+    },
+    "mem-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "367d9429b7b5b3e0b6a5fe22453a133173a08bff99832f1ddb44ce94b8995bc2"
+    },
+    "mercury-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "352c7ecbe7069b5be9c2a70b0f450b536dd77b65b7e098d5ee27a1cb33c6e0cc"
+    },
+    "miro-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "6e793dfb840571a514982df77a7f45b072429baab5722499f451f2da80cdaea4"
+    },
+    "mixpanel-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "b72952500340ae6bcda041fd7f1270b52e8cdc58b56fa8b86b7379fb98b99f35"
+    },
+    "mobbin-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "f9af7f8898280fa9ceb8dc6c63df1f1e332bed84360094531dd994fed9c1d8bf"
+    },
+    "monzo-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "07dda354a90a3a18680fe951dcbb724c79124c264e86508f5af8cd03c17908ae"
+    },
+    "n26-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "1af0b8c1e912120fd0bf86ece75ba4ca948c9f4af7b310fae4481183b353a249"
+    },
+    "neon-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "6edcfa8eff8e267f08e7d0b981b2f35a2511b92c161bcb322c2ff5ba419cc4cb"
+    },
+    "notion-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "ca2fd70f14994f6cb7825e57c2634187948aa5944b4771ab4d59931bd5a4fb12"
+    },
+    "obsidian-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "6190850a042cf5bd48da30d6b86fe2b06ad506c713ddbfbd55accce0f3585413"
+    },
+    "openai-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "22b0f3acc54f22265a4db8fa04b6513337310949a9ae9a9d7c7f4c6a5d9c229d"
+    },
+    "paddle-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "0356648d3de647b06262055df35b99f1d944fed8e3adc621faf2f075bc6a8909"
+    },
+    "pinterest-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "088bdc2d99d0ab8c8e1e1b8e6b1fea0301093bcbc530f785b0cd8624f432f1f9"
+    },
+    "pitch-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "d8a721e90c6112abae682f611a8f0a23a975a72a64965178736ad560de8782ad"
+    },
+    "plaid-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "fedd06e0a6439395807a51f053480e0e76c710a9fd158f5feeed53c651c0a138"
+    },
+    "planetscale-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "ff37feb43ddba19528050654b7e8d2b0177b2a7458d4a34134c945cc4ea30639"
+    },
+    "posthog-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "43a8c7f36c9a06d04436cea7b10f39ac478b8e453778baf0e72b07f6df475230"
+    },
+    "railway-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "fc8d2178bd53c13069eb3fd9f37fecd2b8ceff380a56d4e93442269ddc451db4"
+    },
+    "ramp-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "1ab425f698bab404f7f6188dcf838e319dce514808f95f5d625ee1ee9da1525f"
+    },
+    "raycast-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "ff7d7b43c2f042832792a5d4d22f59f0ff2c6a9e37e079270b000c601e03b621"
+    },
+    "readwise-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "4a488f85352dd37756fa003d765d77a31cf1a4f0f4a99f3e4be24c428cb9f5e3"
+    },
+    "replit-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "40b53b58165f0575eca27e8024cd9626f2ce1e115bd0ef7790fa1551eecb381e"
+    },
+    "resend-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "428b4d419c41276878b343a38427dde76505091f133c59dfbbe981e19780f33a"
+    },
+    "retool-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "9ea74e5f5111196e50b127f5d5e9c641edc5061197b4bc6de3e22627b448a225"
+    },
+    "rippling-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "135b3fe6925c2e9ae95ca41aa7049e4fe922b306b1bbbc27a13aff7a15d506f9"
+    },
+    "robinhood-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "d1be60b226e826b1b647a5fb6fc8ff370021559671b63996968b594ae71c3f0c"
+    },
+    "segment-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "492983a9d5f416d6ba519c389cbde1a57a874fa15970ec8cd09d7f34f07a51de"
+    },
+    "shopify-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "38616186f4a4e9c61c523e855827f577a28f837df9fdc0283406021955033493"
+    },
+    "shortcut-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "2ff28d96c0e24e5d50787490c16370b7701fb5ca4aa3d4e8860c0a2460f1ed14"
+    },
+    "slack-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "0fd846fdbf544ae9366ad560bbe23b40d073018b2f200afd03bcbc9a4c2794b3"
+    },
+    "spotify-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "c8fa47eb38e5e211f57750eecf1538da9d5a2a0f35efb3cb32acd3b5628b2c37"
+    },
+    "stripe-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "899b6bd3ecbd386be3a87a190c958610c8162ba42bb7b24c8be06d776e0f440e"
+    },
+    "substack-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "f1cf2d9e00824d2793765b93b3b8c9e6b7f767e6c5661cb2de323c541df8e987"
+    },
+    "supabase-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "2c4aed9845c797b40a37af8a1ce26191df831b8b837e4bf79a0ff150e4592bd6"
+    },
+    "superhuman-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "6ad868b6293e1e51135dba9ba43ef9c5d37aace60c684968913012fc18e4e73c"
+    },
+    "things-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "3110ce0dbc27b4f6e53d9d3c88f2ed6dfd447337d549e543717202f2526fc32f"
+    },
+    "ticktick-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "169a2e0321ec9d7e894da26b2b22ee046ccce1aa736370cd72446504cbd04cbf"
+    },
+    "tldraw-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "122d4ad272e83a291b5ed39a11810500e5bbacbac4b193f8e210b4df81d825a2"
+    },
+    "todoist-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "40cc7e1be68f9aedb9a6a6b20bee0f776bf66e72f9c092a72c491091c6d5cb6b"
+    },
+    "ui-ux-pro-max": {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "sourceType": "github",
+      "computedHash": "4cfe5e95a230616c17d92b44e3cd37bae543ce087a7756a446a62f77d7c58a37"
+    },
+    "upstash-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "c5681fe8071b5a78efe9cc25d361ae4ea917403a93516d9502b515581b4c8e7b"
+    },
+    "vercel-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "e5eec0275815d191664d9312ba3de2dd60c086491abf223d69d7fffff9b0e3c8"
+    },
+    "warp-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "83a587476fe6d7441adf96c9cba53b7e9e832896ec93b65fac889202c1fecec7"
+    },
+    "webflow-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "e5852382662d524f035f3fab8a10830daa6d95fec63ce36a50613d3ede4a7efb"
+    },
+    "weights-biases-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "dbf1101f23b3e29b0b7b483840c619e1680b4fa897b3a7689837de4562caf140"
+    },
+    "wise-ui-skills": {
+      "source": "ihlamury/design-skills",
+      "sourceType": "github",
+      "computedHash": "3592a0bc0e3c7f412af1b7e74e0d993df95050bacb17837157687787a8a5344a"
+    }
+  }
+}

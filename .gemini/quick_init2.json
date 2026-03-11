@@ -1,0 +1,16 @@
+{
+  "planner_model": "inherit",
+  "executor_model": "sonnet",
+  "checker_model": "sonnet",
+  "verifier_model": "sonnet",
+  "commit_docs": true,
+  "next_num": 2,
+  "slug": "restore-original-ui-based-on-video-refer",
+  "description": "Restore original UI based on video reference",
+  "date": "2026-02-24",
+  "timestamp": "2026-02-24T06:59:56.768Z",
+  "quick_dir": ".planning/quick",
+  "task_dir": ".planning/quick/2-restore-original-ui-based-on-video-refer",
+  "roadmap_exists": true,
+  "planning_exists": true
+}

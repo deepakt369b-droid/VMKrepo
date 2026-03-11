@@ -1,0 +1,16 @@
+{
+  "planner_model": "inherit",
+  "executor_model": "sonnet",
+  "checker_model": "sonnet",
+  "verifier_model": "sonnet",
+  "commit_docs": true,
+  "next_num": 1,
+  "slug": "fix-scroll-animation-improve-whatsapp-ct",
+  "description": "Fix scroll animation, improve WhatsApp CTA, update color palette",
+  "date": "2026-02-24",
+  "timestamp": "2026-02-24T06:33:57.558Z",
+  "quick_dir": ".planning/quick",
+  "task_dir": ".planning/quick/1-fix-scroll-animation-improve-whatsapp-ct",
+  "roadmap_exists": true,
+  "planning_exists": true
+}
