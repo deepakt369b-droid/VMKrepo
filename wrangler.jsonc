@@ -1,19 +1,10 @@
 {
-  "name": "vmkdeploy",
-  "compatibility_date": "2025-09-27",
+  "name": "vmk-app",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2025-03-01",
   "compatibility_flags": ["nodejs_compat"],
-  "observability": {
-    "enabled": true
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
   }
-  // Note: WORKER_SELF_REFERENCE binding omitted intentionally.
-  // This static-only Next.js site does not use ISR/revalidation,
-  // so the self-reference service binding is not needed.
-  // If ISR is added in future, re-add after the first successful deploy:
-  //
-  // "services": [
-  //   {
-  //     "binding": "WORKER_SELF_REFERENCE",
-  //     "service": "vmkdeploy"
-  //   }
-  // ]
 }
