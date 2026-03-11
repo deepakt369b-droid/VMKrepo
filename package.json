@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "opennextjs-cloudflare build",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "cf:build": "opennextjs-cloudflare build",
-    "cf:deploy": "opennextjs-cloudflare build && wrangler deploy",
-    "cf:preview": "opennextjs-cloudflare build && wrangler dev"
+    "cf:build": "next build",
+    "cf:deploy": "next build && wrangler deploy",
+    "cf:preview": "next build && wrangler dev"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
