@@ -27,22 +27,22 @@ export default function BlogPage() {
         <main className="min-h-screen bg-black text-white">
 
             {/* ── Hero ── */}
-            <section className="relative pt-40 pb-20 px-6 overflow-hidden">
-                <div className="absolute inset-0 z-0 opacity-40">
-                    <Threads amplitude={2} distance={0} color={[1, 1, 1]} />
+            <section className="relative pt-40 pb-20 px-6 overflow-hidden gold-texture-bg">
+                <div className="absolute inset-0 z-0 opacity-60">
+                    <Threads amplitude={2} distance={0} color={[0.25, 0.18, 0.05]} />
                 </div>
                 <div className="max-w-7xl mx-auto relative z-10">
                     <div className="flex items-center gap-4 mb-6">
-                        <div className="h-px w-12 bg-amber-500/60" />
-                        <span className="text-amber-500 text-xs font-bold tracking-[0.3em] uppercase">Industry Insights</span>
+                        <div className="h-px w-12 bg-white/60" />
+                        <span className="text-white text-xs font-bold tracking-[0.3em] uppercase drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Industry Insights</span>
                     </div>
                     <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight">
                         The VMK{' '}
-                        <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+                        <span className="text-white drop-shadow-lg">
                             Journal
                         </span>
                     </h1>
-                    <p className="text-xl text-neutral-400 max-w-2xl leading-relaxed">
+                    <p className="text-xl text-white/85 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] max-w-2xl leading-relaxed">
                         Expert perspectives on Dubai construction, authority approvals, and the evolving real estate landscape.
                     </p>
                 </div>

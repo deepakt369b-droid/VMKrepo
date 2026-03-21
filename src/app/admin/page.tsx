@@ -8,6 +8,8 @@ import { TEAM_DATA, TeamMember } from '@/lib/teamData';
 import { FAQ_DATA, FAQItem } from '@/lib/faqData';
 import { PARTNER_DATA, Partner } from '@/lib/partnerData';
 import { CAROUSEL_SETTINGS, CarouselSettings } from '@/lib/carouselSettings';
+import { CONTACT_SETTINGS } from '@/lib/contactSettings';
+import { SMTP_SETTINGS } from '@/lib/smtpSettings';
 import dynamic from 'next/dynamic';
 import 'react-quill-new/dist/quill.snow.css';
 
@@ -77,11 +79,11 @@ export default function AdminDashboard() {
     const [imagePreviewStatus, setImagePreviewStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
     // SMTP state
-    const [smtp, setSmtp] = useState({ host: '', port: '587', user: '', pass: '', from: '' });
+    const [smtp, setSmtp] = useState({ ...SMTP_SETTINGS });
     const [smtpSaved, setSmtpSaved] = useState(false);
 
     // WhatsApp state
-    const [wa, setWa] = useState({ number: '+971500000000', template: 'Hi VMK Construction, I would like to enquire about your services.' });
+    const [wa, setWa] = useState({ number: CONTACT_SETTINGS.whatsappNumber, template: CONTACT_SETTINGS.whatsappTemplate });
     const [waSaved, setWaSaved] = useState(false);
 
     // Account state
@@ -187,7 +189,16 @@ export default function AdminDashboard() {
                                     <div className="flex-1 min-w-0"><div className="flex items-center gap-2 mb-1"><span className="text-xs font-semibold text-amber-500 uppercase tracking-wider">{post.category}</span><span className="text-neutral-600">·</span><span className="text-xs text-neutral-500">{post.date}</span></div><h3 className="font-semibold text-white text-sm truncate">{post.title}</h3></div>
                                     <div className="flex gap-2 shrink-0">
                                         <button onClick={() => { setEditPost(post); setIsAddingNew(false); setImagePreviewStatus('idle'); }} className="px-3 py-1.5 text-xs font-semibold border border-white/10 rounded-lg text-neutral-300 hover:border-amber-500/30 hover:text-amber-400 transition-all">Edit</button>
-                                        <button onClick={() => setPosts(prev => prev.filter(p => p.id !== post.id))} className="px-3 py-1.5 text-xs font-semibold border border-white/10 rounded-lg text-neutral-300 hover:border-red-500/30 hover:text-red-400 transition-all">Delete</button>
+                                        <button
+                                            onClick={async () => {
+                                                const newPosts = posts.filter(p => p.id !== post.id);
+                                                setPosts(newPosts);
+                                                await fetch('/api/admin/save', { method: 'POST', body: JSON.stringify({ type: 'blog', data: newPosts }) });
+                                            }}
+                                            className="px-3 py-1.5 text-xs font-semibold border border-white/10 rounded-lg text-neutral-300 hover:border-red-500/30 hover:text-red-400 transition-all"
+                                        >
+                                            Delete
+                                        </button>
                                     </div>
                                 </div>
                             ))}
@@ -279,7 +290,16 @@ export default function AdminDashboard() {
                                     <div className="flex-1 min-w-0"><div className="flex items-center gap-2 mb-1"><span className="text-xs font-semibold text-amber-500 uppercase tracking-wider">{proj.category}</span><span className="text-[10px] bg-white/10 px-2 py-0.5 rounded-full">{proj.badge}</span></div><h3 className="font-semibold text-white text-sm truncate">{proj.title}</h3></div>
                                     <div className="flex gap-2 shrink-0">
                                         <button onClick={() => { setEditProject(proj); setIsAddingNew(false); }} className="px-3 py-1.5 text-xs font-semibold border border-white/10 rounded-lg text-neutral-300 hover:border-amber-500/30 hover:text-amber-400 transition-all">Edit</button>
-                                        <button onClick={() => setProjects(prev => prev.filter(p => p.id !== proj.id))} className="px-3 py-1.5 text-xs font-semibold border border-white/10 rounded-lg text-neutral-300 hover:border-red-500/30 hover:text-red-400 transition-all">Delete</button>
+                                        <button
+                                            onClick={async () => {
+                                                const newProjects = projects.filter(p => p.id !== proj.id);
+                                                setProjects(newProjects);
+                                                await fetch('/api/admin/save', { method: 'POST', body: JSON.stringify({ type: 'projects', data: newProjects }) });
+                                            }}
+                                            className="px-3 py-1.5 text-xs font-semibold border border-white/10 rounded-lg text-neutral-300 hover:border-red-500/30 hover:text-red-400 transition-all"
+                                        >
+                                            Delete
+                                        </button>
                                     </div>
                                 </div>
                             ))}
@@ -334,7 +354,16 @@ export default function AdminDashboard() {
                                     <div className="flex-1 min-w-0"><div className="flex items-center gap-2 mb-1"><span className="text-xs font-semibold text-amber-500 uppercase tracking-wider">{member.role}</span></div><h3 className="font-semibold text-white text-sm truncate">{member.name}</h3></div>
                                     <div className="flex gap-2 shrink-0">
                                         <button onClick={() => { setEditTeam(member); setIsAddingNew(false); }} className="px-3 py-1.5 text-xs font-semibold border border-white/10 rounded-lg text-neutral-300 hover:border-amber-500/30 hover:text-amber-400 transition-all">Edit</button>
-                                        <button onClick={() => setTeam(prev => prev.filter(p => p.id !== member.id))} className="px-3 py-1.5 text-xs font-semibold border border-white/10 rounded-lg text-neutral-300 hover:border-red-500/30 hover:text-red-400 transition-all">Delete</button>
+                                        <button
+                                            onClick={async () => {
+                                                const newTeam = team.filter(p => p.id !== member.id);
+                                                setTeam(newTeam);
+                                                await fetch('/api/admin/save', { method: 'POST', body: JSON.stringify({ type: 'team', data: newTeam }) });
+                                            }}
+                                            className="px-3 py-1.5 text-xs font-semibold border border-white/10 rounded-lg text-neutral-300 hover:border-red-500/30 hover:text-red-400 transition-all"
+                                        >
+                                            Delete
+                                        </button>
                                     </div>
                                 </div>
                             ))}
@@ -378,7 +407,16 @@ export default function AdminDashboard() {
                                     </div>
                                     <div className="flex gap-2 shrink-0">
                                         <button onClick={() => { setEditFaq(faq); setIsAddingNew(false); }} className="px-3 py-1.5 text-xs font-semibold border border-white/10 rounded-lg text-neutral-300 hover:border-amber-500/30 hover:text-amber-400 transition-all">Edit</button>
-                                        <button onClick={() => setFaqs(prev => prev.filter(p => p.id !== faq.id))} className="px-3 py-1.5 text-xs font-semibold border border-white/10 rounded-lg text-neutral-300 hover:border-red-500/30 hover:text-red-400 transition-all">Delete</button>
+                                        <button
+                                            onClick={async () => {
+                                                const newFaqs = faqs.filter(p => p.id !== faq.id);
+                                                setFaqs(newFaqs);
+                                                await fetch('/api/admin/save', { method: 'POST', body: JSON.stringify({ type: 'faq', data: newFaqs }) });
+                                            }}
+                                            className="px-3 py-1.5 text-xs font-semibold border border-white/10 rounded-lg text-neutral-300 hover:border-red-500/30 hover:text-red-400 transition-all"
+                                        >
+                                            Delete
+                                        </button>
                                     </div>
                                 </div>
                             ))}
@@ -582,7 +620,17 @@ export default function AdminDashboard() {
                                 ))}
                                 <div className="flex gap-3">
                                     <button
-                                        onClick={() => { setSmtpSaved(true); setTimeout(() => setSmtpSaved(false), 3000); }}
+                                        onClick={async () => {
+                                            const res = await fetch('/api/admin/save', {
+                                                method: 'POST',
+                                                body: JSON.stringify({ type: 'smtp_settings', data: smtp }),
+                                            });
+
+                                            if (!res.ok) return;
+
+                                            setSmtpSaved(true);
+                                            setTimeout(() => setSmtpSaved(false), 3000);
+                                        }}
                                         className="px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 text-black font-bold text-sm rounded-xl transition-all"
                                     >
                                         {smtpSaved ? '✓ Saved' : 'Save SMTP Config'}
@@ -614,7 +662,20 @@ export default function AdminDashboard() {
                                 </div>
                                 <div className="flex gap-3">
                                     <button
-                                        onClick={() => { setWaSaved(true); setTimeout(() => setWaSaved(false), 3000); }}
+                                        onClick={async () => {
+                                            const res = await fetch('/api/admin/save', {
+                                                method: 'POST',
+                                                body: JSON.stringify({
+                                                    type: 'contact_settings',
+                                                    data: { whatsappNumber: wa.number, whatsappTemplate: wa.template },
+                                                }),
+                                            });
+
+                                            if (!res.ok) return;
+
+                                            setWaSaved(true);
+                                            setTimeout(() => setWaSaved(false), 3000);
+                                        }}
                                         className="px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 text-black font-bold text-sm rounded-xl transition-all"
                                     >
                                         {waSaved ? '✓ Saved' : 'Save Config'}

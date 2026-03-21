@@ -88,22 +88,22 @@ export default function PlanningPage() {
         <main className="min-h-screen bg-black text-white">
 
             {/* ── Hero ── */}
-            <section className="relative pt-40 pb-20 px-6 overflow-hidden">
-                <div className="absolute inset-0 z-0 opacity-40">
-                    <Threads amplitude={2} distance={0} color={[1, 1, 1]} />
+            <section className="relative pt-40 pb-20 px-6 overflow-hidden gold-texture-bg">
+                <div className="absolute inset-0 z-0 opacity-60">
+                    <Threads amplitude={2} distance={0} color={[0.25, 0.18, 0.05]} />
                 </div>
                 <div className="max-w-7xl mx-auto relative z-10">
                     <div className="flex items-center gap-4 mb-6">
-                        <div className="h-px w-12 bg-amber-500/60" />
-                        <span className="text-amber-500 text-xs font-bold tracking-[0.3em] uppercase">Planning & Approvals</span>
+                        <div className="h-px w-12 bg-white/60" />
+                        <span className="text-white text-xs font-bold tracking-[0.3em] uppercase drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Planning & Approvals</span>
                     </div>
                     <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight max-w-4xl">
                         Authority Approvals{' '}
-                        <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+                        <span className="text-white drop-shadow-lg">
                             Done Right
                         </span>
                     </h1>
-                    <p className="text-xl text-neutral-400 max-w-3xl leading-relaxed mb-10">
+                    <p className="text-xl text-white/85 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] max-w-3xl leading-relaxed mb-10">
                         Navigating Dubai&apos;s regulatory landscape requires deep experience and established relationships. VMK handles every authority from DM to DEWA — so you can focus on your vision.
                     </p>
                     <div className="flex flex-wrap gap-6">
@@ -113,8 +113,8 @@ export default function PlanningPage() {
                             { label: '21 Days', sub: 'Avg. DM Approval' },
                         ].map((s) => (
                             <div key={s.sub} className="text-center">
-                                <div className="text-3xl font-bold bg-gradient-to-b from-amber-400 to-amber-600 bg-clip-text text-transparent">{s.label}</div>
-                                <div className="text-neutral-500 text-xs uppercase tracking-wider mt-1">{s.sub}</div>
+                                <div className="text-3xl font-bold text-white drop-shadow-lg">{s.label}</div>
+                                <div className="text-white/70 text-xs uppercase tracking-wider mt-1">{s.sub}</div>
                             </div>
                         ))}
                     </div>

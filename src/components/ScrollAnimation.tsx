@@ -119,12 +119,18 @@ export default function ScrollAnimation() {
                 ref={canvasRef}
                 className="absolute top-0 left-0 w-full h-full object-cover"
             />
+            {/* Dark vignette overlay for text readability */}
+            <div className="absolute inset-0 z-[5] pointer-events-none"
+                 style={{
+                     background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 55%, transparent 80%)'
+                 }}
+            />
             {/* Absolute overlay content would go here */}
             <div className="absolute inset-0 flex flex-col justify-center items-center text-white z-10 pointer-events-none p-4 text-center mt-20" suppressHydrationWarning>
                 <TextType
                     as="p"
                     text="Operating Across All Dubai Authorities"
-                    className="text-sm font-bold tracking-[0.3em] mb-4 text-white uppercase"
+                    className="text-sm font-bold tracking-[0.3em] mb-4 text-white uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
                     typingSpeed={30}
                     showCursor={false}
                     loop={false}
@@ -143,7 +149,7 @@ export default function ScrollAnimation() {
                 <TextType
                     as="p"
                     text="Construction & Authority Approvals"
-                    className="text-3xl md:text-5xl italic text-amber-500 font-serif lowercase [text-shadow:0_1px_0_rgb(180,110,0),0_2px_0_rgb(160,95,0),0_3px_0_rgb(140,80,0),0_4px_0_rgb(120,65,0),0_5px_0_rgb(100,50,0),0_6px_1px_rgba(0,0,0,0.1),0_0_5px_rgba(0,0,0,0.1),0_1px_3px_rgba(0,0,0,0.3),0_3px_5px_rgba(0,0,0,0.2),0_5px_10px_rgba(0,0,0,0.25),0_10px_10px_rgba(0,0,0,0.2),0_20px_20px_rgba(0,0,0,0.15)]"
+                    className="text-3xl md:text-5xl italic text-amber-500 font-serif lowercase [text-shadow:0_1px_0_rgb(80,50,0),0_2px_0_rgb(60,35,0),0_3px_0_rgb(50,28,0),0_4px_0_rgb(40,22,0),0_5px_0_rgb(30,15,0),0_6px_1px_rgba(0,0,0,0.3),0_0_5px_rgba(0,0,0,0.3),0_1px_3px_rgba(0,0,0,0.5),0_3px_5px_rgba(0,0,0,0.4),0_5px_10px_rgba(0,0,0,0.35),0_10px_10px_rgba(0,0,0,0.3),0_20px_20px_rgba(0,0,0,0.2)]"
                     style={{ textTransform: 'capitalize' }}
                     typingSpeed={40}
                     initialDelay={2800}
@@ -152,8 +158,8 @@ export default function ScrollAnimation() {
                 />
 
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center" suppressHydrationWarning>
-                    <span className="text-xs uppercase tracking-[0.3em] text-white/70 mb-2" suppressHydrationWarning>Scroll</span>
-                    <div className="w-[1px] h-16 bg-white/30 relative overflow-hidden" suppressHydrationWarning>
+                    <span className="text-xs uppercase tracking-[0.3em] text-white/90 mb-2 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]" suppressHydrationWarning>Scroll</span>
+                    <div className="w-[1px] h-16 bg-white/50 relative overflow-hidden shadow-[0_0_6px_rgba(255,255,255,0.3)]" suppressHydrationWarning>
                         <div className="absolute top-0 left-0 w-full h-full bg-white animate-pulse" suppressHydrationWarning></div>
                     </div>
                 </div>

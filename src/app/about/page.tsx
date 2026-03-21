@@ -56,12 +56,12 @@ export default function AboutPage() {
         <main className="min-h-screen bg-black text-white">
 
             {/* ── Hero ── */}
-            <section className="relative pt-40 pb-24 px-6 overflow-hidden">
-                <div className="absolute inset-0 z-0 opacity-40">
+            <section className="relative pt-40 pb-24 px-6 overflow-hidden gold-texture-bg">
+                <div className="absolute inset-0 z-0 opacity-60">
                     <Threads
                         amplitude={2}
                         distance={0}
-                        color={[1, 1, 1]} // White color instead of Gold
+                        color={[0.25, 0.18, 0.05]} // Dark brown-gold color for visibility on gold background
                     />
                 </div>
                 <div className="max-w-7xl mx-auto relative z-10">
@@ -74,7 +74,7 @@ export default function AboutPage() {
                         <br />
                         <span className="text-white drop-shadow-lg">Since 2009</span>
                     </h1>
-                    <p className="text-xl text-neutral-400 max-w-3xl leading-relaxed">
+                    <p className="text-xl text-white/85 max-w-3xl leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
                         VMK Construction was founded on one principle: that exceptional construction doesn&apos;t have to be complicated. From our first project in Deira to landmark developments in the heart of DIFC, we have spent 15 years proving that quality and speed can coexist.
                     </p>
                 </div>

@@ -49,28 +49,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.animated-gold-gradient {
-  background: linear-gradient(135deg, #f9f6e6, #d4af37, #b8860b, #f3e5ab, #d4af37);
-  background-size: 300% 300%;
-  animation: gradient-shift 5s ease infinite;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+.gold-texture-bg {
+  background-image: url('/images/gold-texture-bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #b18c47;
 }
 
 /* React Quill Dark Mode Overrides */

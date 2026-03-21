@@ -1,11 +1,17 @@
 "use client";
 
 import React from 'react';
+import { CONTACT_SETTINGS } from '@/lib/contactSettings';
+
+function toWaMeNumber(value: string): string {
+    return value.replace(/\D/g, '');
+}
 
 export default function WhatsAppButton() {
+    const waNumber = toWaMeNumber(CONTACT_SETTINGS.whatsappNumber);
     return (
         <a
-            href="https://wa.me/971500000000"
+            href={`https://wa.me/${waNumber}`}
             target="_blank"
             rel="noopener noreferrer"
             className="fixed bottom-6 right-6 z-[90] bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 hover:bg-[#20bc5a] transition-all duration-300 flex items-center justify-center group"

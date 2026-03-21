@@ -13,11 +13,12 @@ export async function POST(req: Request) {
         const body = await req.json();
         const { type, data } = body;
 
-        if (!['blog', 'projects', 'team', 'faq', 'partners', 'carousel_settings'].includes(type)) {
+        const objectTypes = new Set(['carousel_settings', 'contact_settings', 'smtp_settings']);
+        if (!['blog', 'projects', 'team', 'faq', 'partners', 'carousel_settings', 'contact_settings', 'smtp_settings'].includes(type)) {
             return NextResponse.json({ error: 'Invalid payload' }, { status: 400 });
         }
 
-        if (type !== 'carousel_settings' && !Array.isArray(data)) {
+        if (!objectTypes.has(type) && !Array.isArray(data)) {
             return NextResponse.json({ error: 'Invalid payload' }, { status: 400 });
         }
 
@@ -56,6 +57,16 @@ export async function POST(req: Request) {
                 exportName = 'CAROUSEL_SETTINGS';
                 interfaceName = 'CarouselSettings';
                 break;
+            case 'contact_settings':
+                fileName = 'contactSettings.ts';
+                exportName = 'CONTACT_SETTINGS';
+                interfaceName = 'ContactSettings';
+                break;
+            case 'smtp_settings':
+                fileName = 'smtpSettings.ts';
+                exportName = 'SMTP_SETTINGS';
+                interfaceName = 'SmtpSettings';
+                break;
         }
 
         const filePath = path.join(process.cwd(), 'src', 'lib', fileName);
@@ -79,7 +90,7 @@ export async function POST(req: Request) {
 
         let updatedContent = "";
 
-        if (type === 'carousel_settings') {
+        if (objectTypes.has(type)) {
             updatedContent = parts[0] + `export const ${exportName}: ${interfaceName} = ${newDataString};\n`;
         } else {
             updatedContent = parts[0] + `export const ${exportName}: ${interfaceName}[] = ${newDataString};\n`;
